@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Form Pemesanan Barang</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- ===== HEADER ===== -->
+  <header>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Generate Link</a>
+      <a href="#">Transaction History</a>
+      <a href="#">Policy</a>
+      <a href="#">Logout</a>
+    </nav>
+  </header>
+
+  <!-- ===== FORM ===== -->
+  <div class="container">
+    <form id="orderForm" action="hasil2.html" method="get">
+      <div class="form-layout">
+        <!-- Bagian kiri (gambar) -->
+        <div class="form-left">
+          <img id="preview" src="samsu.jpg" alt="Gambar Produk">
+          <!-- input file disembunyikan -->
+          <input type="file" id="productImage" accept="image/*" style="display:none;">
+        </div>
+
+        <!-- Bagian kanan (input data) -->
+        <div class="form-right">
+          <label>Title Here:</label>
+          <input type="text" name="title" required>
+
+          <label>Description:</label>
+          <textarea name="description" rows="3" placeholder="Year: 2009&#10;Model: &#10;Condition: Mint" required></textarea>
+
+          <label>Account Number:</label>
+          <input type="text" name="account" required>
+
+          <label>Bank:</label>
+          <select name="bank" required>
+            <option value="">-- Pilih Bank --</option>
+            <option value="BNI">BNI</option>
+            <option value="BCA">BCA</option>
+            <option value="BRI">BRI</option>
+            <option value="BSI">BSI</option>
+          </select>
+
+          <label>Account Holder Name:</label>
+          <input type="text" name="holder" required>
+
+          <label>Transaction:</label>
+          <input type="text" name="transaction" placeholder="e.g. If the transaction is for 3 person..." required>
+
+          <div class="checkbox-group">
+            <div class="checkbox-item">
+              <input type="checkbox" name="sendPhone" id="sendPhone">
+              <label for="sendPhone">Send to Mobile Phone</label>
+            </div>
+            <div class="checkbox-item">
+              <input type="checkbox" name="sendEmail" id="sendEmail">
+              <label for="sendEmail">Send to Email</label>
+            </div>
+          </div>
+
+          <label>Send to Mobile Phone:</label>
+          <input type="text" name="mobile" required>
+
+          <label>Send to Email:</label>
+          <input type="email" name="email" required>
+          <button class="btn" type="submit">Generate Note Link</button>
+        </div>
+      </div>
+    </form>
+  </div>
+
+</body>
+</html>
